@@ -69,16 +69,26 @@ const AdminLayout = () => {
     <>
       <Layout>
         <Layout.Sider style={siderStyle} collapsed={collapsed}>
-          <Space direction='vertical' style={{display:'flex',justifyContent: 'space-between',height:'100%'}}>
+          <Space
+            direction="vertical"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              height: "100%",
+              paddingBottom:"5px"
+            }}
+          >
             <Menu
               style={{ textAlign: "left" }}
               items={items}
               onClick={onClick}
             />
-            <Button onClick={loginWithRedirect} >Login</Button>
-            <Button onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
-              {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            </Button>
+            <Space direction="vertical">
+              <Button onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
+                {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              </Button>
+              <Button onClick={loginWithRedirect}>Login</Button>
+            </Space>
           </Space>
         </Layout.Sider>
         <Layout.Content style={contentStyle}>
