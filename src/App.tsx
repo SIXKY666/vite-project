@@ -11,11 +11,12 @@ import "./App.css";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path='/' element={<AdminLayout/>}>
-        <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path="/" element={<AdminLayout />}>
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </Route>
-  ))
+  )
+);
 
 const App = () => <RouterProvider router={router}/>
 
